@@ -11,6 +11,8 @@
 		CC17C0A122830EBF00F23CE8 /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17C0A022830EBF00F23CE8 /* ForecastTableViewCell.swift */; };
 		CC17C0A42283114400F23CE8 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17C0A32283114400F23CE8 /* NetworkController.swift */; };
 		CC17C0A8228311CA00F23CE8 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17C0A7228311CA00F23CE8 /* ImageUtil.swift */; };
+		CC17C0AB22831BF000F23CE8 /* Conditions.json in Resources */ = {isa = PBXBuildFile; fileRef = CC17C0AA22831BF000F23CE8 /* Conditions.json */; };
+		CC17C0AD22831DFE00F23CE8 /* ConditionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17C0AC22831DFE00F23CE8 /* ConditionInfo.swift */; };
 		CCB556702282E26F00B4CC7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5566F2282E26F00B4CC7C /* AppDelegate.swift */; };
 		CCB556722282E26F00B4CC7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB556712282E26F00B4CC7C /* ViewController.swift */; };
 		CCB556752282E26F00B4CC7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCB556732282E26F00B4CC7C /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 		CC17C0A022830EBF00F23CE8 /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
 		CC17C0A32283114400F23CE8 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		CC17C0A7228311CA00F23CE8 /* ImageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
+		CC17C0AA22831BF000F23CE8 /* Conditions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Conditions.json; sourceTree = "<group>"; };
+		CC17C0AC22831DFE00F23CE8 /* ConditionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionInfo.swift; sourceTree = "<group>"; };
 		CCB5566C2282E26F00B4CC7C /* miniweather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniweather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCB5566F2282E26F00B4CC7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCB556712282E26F00B4CC7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +74,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		CC17C0A922831BC300F23CE8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CC17C0AA22831BF000F23CE8 /* Conditions.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		CCB556632282E26F00B4CC7C = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				CCB5566F2282E26F00B4CC7C /* AppDelegate.swift */,
+				CC17C0A922831BC300F23CE8 /* Resources */,
 				CC17C0A22283112800F23CE8 /* Data */,
 				CCB556812282F1D900B4CC7C /* Model */,
 				CCB556712282E26F00B4CC7C /* ViewController.swift */,
@@ -111,6 +124,7 @@
 				CCB556842282F48700B4CC7C /* Location.swift */,
 				CCB556862282F54C00B4CC7C /* Astro.swift */,
 				CCB556882282F5D100B4CC7C /* Condition.swift */,
+				CC17C0AC22831DFE00F23CE8 /* ConditionInfo.swift */,
 				CCB5568A2282F62F00B4CC7C /* Day.swift */,
 				CCB556902282FA3C00B4CC7C /* Current.swift */,
 				CCB5568C2282F7B900B4CC7C /* ForecastDay.swift */,
@@ -178,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCB5567A2282E27100B4CC7C /* LaunchScreen.storyboard in Resources */,
+				CC17C0AB22831BF000F23CE8 /* Conditions.json in Resources */,
 				CCB556772282E27100B4CC7C /* Assets.xcassets in Resources */,
 				CCB556752282E26F00B4CC7C /* Main.storyboard in Resources */,
 			);
@@ -191,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCB5568B2282F62F00B4CC7C /* Day.swift in Sources */,
+				CC17C0AD22831DFE00F23CE8 /* ConditionInfo.swift in Sources */,
 				CCB556932282FC3900B4CC7C /* BasicForecast.swift in Sources */,
 				CC17C09F22830DFD00F23CE8 /* SearchResultTableViewCell.swift in Sources */,
 				CCB556912282FA3C00B4CC7C /* Current.swift in Sources */,

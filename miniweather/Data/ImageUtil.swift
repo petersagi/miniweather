@@ -10,7 +10,30 @@ import UIKit
 
 class ImageUtil {
     
+    static let shared = ImageUtil()
+    
+    private var info: [ConditionInfo]
+    
+    private init() {
+        if let fileUrl = Bundle.main.url(forResource: "Conditions", withExtension: "json"),
+            let data = try? Data(contentsOf: fileUrl),
+            let conditionInfo = try? JSONDecoder().decode([ConditionInfo].self, from: data) {
+            
+            info = conditionInfo
+        }
+        else {
+            info = []
+        }
+    }
+    
     static func getIcon(to condition: Int) -> UIImage? {
-        return nil
+        if let condition = (shared.info.filter { condition == $0.code }).first,
+            let image = UIImage(named: String(condition.icon)) {
+            
+            return image
+        }
+        else {
+            return nil
+        }
     }
 }
