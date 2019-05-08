@@ -28,7 +28,7 @@
                                 <rect key="frame" x="16" y="134" width="382" height="762"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cityCell" rowHeight="50" id="Jmb-ao-Fr9">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchResultCell" rowHeight="50" id="Jmb-ao-Fr9" customClass="SearchResultTableViewCell" customModule="miniweather" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="382" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jmb-ao-Fr9" id="A5W-1Y-QQE">
@@ -49,7 +49,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Eez-yy-LeE" kind="show" id="mBL-Tm-rLT"/>
+                                            <outlet property="cityNameLabel" destination="aDn-hd-Ydi" id="qCC-nM-Jf2"/>
+                                            <segue destination="Eez-yy-LeE" kind="show" identifier="showForecast" id="mBL-Tm-rLT"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -82,7 +83,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="forecastCell" rowHeight="235" id="sNs-Yx-bQd">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="forecastCell" rowHeight="235" id="sNs-Yx-bQd" customClass="ForecastTableViewCell" customModule="miniweather" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="235"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sNs-Yx-bQd" id="BU6-9x-6rc">
@@ -189,6 +190,15 @@
                                         <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Tby-YP-KGl" secondAttribute="trailing" constant="16" id="zMg-Rt-gfk"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="conditionImageView" destination="SQc-yr-hgw" id="cbD-iw-tuX"/>
+                                    <outlet property="conditionLabel" destination="Tby-YP-KGl" id="4MT-Y0-319"/>
+                                    <outlet property="dateLabel" destination="vCu-JC-P2x" id="juR-PH-YOg"/>
+                                    <outlet property="dayTempLabel" destination="wKV-Lo-Csw" id="DNa-y8-JdF"/>
+                                    <outlet property="nightTempLabel" destination="1XB-D7-nXs" id="5t7-Ug-2f7"/>
+                                    <outlet property="sunriseLabel" destination="L2k-IW-ICR" id="jQq-MR-zWX"/>
+                                    <outlet property="sunsetLabel" destination="aYb-KW-kqA" id="vFJ-kH-OsX"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -199,7 +209,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6yp-4K-nyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2218.840579710145" y="127.90178571428571"/>
+            <point key="canvasLocation" x="2019" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="q1w-61-3R5">
@@ -217,7 +227,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7h-DT-6QP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="144.92753623188406" y="-558.48214285714278"/>
+            <point key="canvasLocation" x="116" y="116"/>
         </scene>
     </scenes>
 </document>

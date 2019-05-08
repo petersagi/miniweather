@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC17C09F22830DFD00F23CE8 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17C09E22830DFD00F23CE8 /* SearchResultTableViewCell.swift */; };
+		CC17C0A122830EBF00F23CE8 /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17C0A022830EBF00F23CE8 /* ForecastTableViewCell.swift */; };
+		CC17C0A42283114400F23CE8 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17C0A32283114400F23CE8 /* NetworkController.swift */; };
+		CC17C0A8228311CA00F23CE8 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17C0A7228311CA00F23CE8 /* ImageUtil.swift */; };
 		CCB556702282E26F00B4CC7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5566F2282E26F00B4CC7C /* AppDelegate.swift */; };
 		CCB556722282E26F00B4CC7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB556712282E26F00B4CC7C /* ViewController.swift */; };
 		CCB556752282E26F00B4CC7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCB556732282E26F00B4CC7C /* Main.storyboard */; };
@@ -24,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC17C09E22830DFD00F23CE8 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		CC17C0A022830EBF00F23CE8 /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
+		CC17C0A32283114400F23CE8 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		CC17C0A7228311CA00F23CE8 /* ImageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
 		CCB5566C2282E26F00B4CC7C /* miniweather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniweather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCB5566F2282E26F00B4CC7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCB556712282E26F00B4CC7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC17C0A22283112800F23CE8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CC17C0A7228311CA00F23CE8 /* ImageUtil.swift */,
+				CC17C0A32283114400F23CE8 /* NetworkController.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		CCB556632282E26F00B4CC7C = {
 			isa = PBXGroup;
 			children = (
@@ -73,9 +90,12 @@
 			isa = PBXGroup;
 			children = (
 				CCB5566F2282E26F00B4CC7C /* AppDelegate.swift */,
+				CC17C0A22283112800F23CE8 /* Data */,
 				CCB556812282F1D900B4CC7C /* Model */,
 				CCB556712282E26F00B4CC7C /* ViewController.swift */,
 				CCB556732282E26F00B4CC7C /* Main.storyboard */,
+				CC17C0A022830EBF00F23CE8 /* ForecastTableViewCell.swift */,
+				CC17C09E22830DFD00F23CE8 /* SearchResultTableViewCell.swift */,
 				CCB556762282E27100B4CC7C /* Assets.xcassets */,
 				CCB556782282E27100B4CC7C /* LaunchScreen.storyboard */,
 				CCB5567B2282E27100B4CC7C /* Info.plist */,
@@ -172,14 +192,18 @@
 			files = (
 				CCB5568B2282F62F00B4CC7C /* Day.swift in Sources */,
 				CCB556932282FC3900B4CC7C /* BasicForecast.swift in Sources */,
+				CC17C09F22830DFD00F23CE8 /* SearchResultTableViewCell.swift in Sources */,
 				CCB556912282FA3C00B4CC7C /* Current.swift in Sources */,
 				CCB5568D2282F7B900B4CC7C /* ForecastDay.swift in Sources */,
 				CCB556722282E26F00B4CC7C /* ViewController.swift in Sources */,
+				CC17C0A122830EBF00F23CE8 /* ForecastTableViewCell.swift in Sources */,
 				CCB556892282F5D100B4CC7C /* Condition.swift in Sources */,
 				CCB5568F2282F98F00B4CC7C /* Forecast.swift in Sources */,
+				CC17C0A8228311CA00F23CE8 /* ImageUtil.swift in Sources */,
 				CCB556832282F1F600B4CC7C /* BasicLocation.swift in Sources */,
 				CCB556852282F48700B4CC7C /* Location.swift in Sources */,
 				CCB556872282F54C00B4CC7C /* Astro.swift in Sources */,
+				CC17C0A42283114400F23CE8 /* NetworkController.swift in Sources */,
 				CCB556702282E26F00B4CC7C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
