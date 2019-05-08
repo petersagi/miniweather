@@ -12,6 +12,15 @@
 		CCB556752282E26F00B4CC7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCB556732282E26F00B4CC7C /* Main.storyboard */; };
 		CCB556772282E27100B4CC7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCB556762282E27100B4CC7C /* Assets.xcassets */; };
 		CCB5567A2282E27100B4CC7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCB556782282E27100B4CC7C /* LaunchScreen.storyboard */; };
+		CCB556832282F1F600B4CC7C /* BasicLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB556822282F1F600B4CC7C /* BasicLocation.swift */; };
+		CCB556852282F48700B4CC7C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB556842282F48700B4CC7C /* Location.swift */; };
+		CCB556872282F54C00B4CC7C /* Astro.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB556862282F54C00B4CC7C /* Astro.swift */; };
+		CCB556892282F5D100B4CC7C /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB556882282F5D100B4CC7C /* Condition.swift */; };
+		CCB5568B2282F62F00B4CC7C /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5568A2282F62F00B4CC7C /* Day.swift */; };
+		CCB5568D2282F7B900B4CC7C /* ForecastDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5568C2282F7B900B4CC7C /* ForecastDay.swift */; };
+		CCB5568F2282F98F00B4CC7C /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5568E2282F98F00B4CC7C /* Forecast.swift */; };
+		CCB556912282FA3C00B4CC7C /* Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB556902282FA3C00B4CC7C /* Current.swift */; };
+		CCB556932282FC3900B4CC7C /* BasicForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB556922282FC3900B4CC7C /* BasicForecast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		CCB556762282E27100B4CC7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCB556792282E27100B4CC7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCB5567B2282E27100B4CC7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCB556822282F1F600B4CC7C /* BasicLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicLocation.swift; sourceTree = "<group>"; };
+		CCB556842282F48700B4CC7C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		CCB556862282F54C00B4CC7C /* Astro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astro.swift; sourceTree = "<group>"; };
+		CCB556882282F5D100B4CC7C /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
+		CCB5568A2282F62F00B4CC7C /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		CCB5568C2282F7B900B4CC7C /* ForecastDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastDay.swift; sourceTree = "<group>"; };
+		CCB5568E2282F98F00B4CC7C /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		CCB556902282FA3C00B4CC7C /* Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Current.swift; sourceTree = "<group>"; };
+		CCB556922282FC3900B4CC7C /* BasicForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicForecast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				CCB5566F2282E26F00B4CC7C /* AppDelegate.swift */,
+				CCB556812282F1D900B4CC7C /* Model */,
 				CCB556712282E26F00B4CC7C /* ViewController.swift */,
 				CCB556732282E26F00B4CC7C /* Main.storyboard */,
 				CCB556762282E27100B4CC7C /* Assets.xcassets */,
@@ -62,6 +81,22 @@
 				CCB5567B2282E27100B4CC7C /* Info.plist */,
 			);
 			path = miniweather;
+			sourceTree = "<group>";
+		};
+		CCB556812282F1D900B4CC7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCB556822282F1F600B4CC7C /* BasicLocation.swift */,
+				CCB556922282FC3900B4CC7C /* BasicForecast.swift */,
+				CCB556842282F48700B4CC7C /* Location.swift */,
+				CCB556862282F54C00B4CC7C /* Astro.swift */,
+				CCB556882282F5D100B4CC7C /* Condition.swift */,
+				CCB5568A2282F62F00B4CC7C /* Day.swift */,
+				CCB556902282FA3C00B4CC7C /* Current.swift */,
+				CCB5568C2282F7B900B4CC7C /* ForecastDay.swift */,
+				CCB5568E2282F98F00B4CC7C /* Forecast.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +170,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCB5568B2282F62F00B4CC7C /* Day.swift in Sources */,
+				CCB556932282FC3900B4CC7C /* BasicForecast.swift in Sources */,
+				CCB556912282FA3C00B4CC7C /* Current.swift in Sources */,
+				CCB5568D2282F7B900B4CC7C /* ForecastDay.swift in Sources */,
 				CCB556722282E26F00B4CC7C /* ViewController.swift in Sources */,
+				CCB556892282F5D100B4CC7C /* Condition.swift in Sources */,
+				CCB5568F2282F98F00B4CC7C /* Forecast.swift in Sources */,
+				CCB556832282F1F600B4CC7C /* BasicLocation.swift in Sources */,
+				CCB556852282F48700B4CC7C /* Location.swift in Sources */,
+				CCB556872282F54C00B4CC7C /* Astro.swift in Sources */,
 				CCB556702282E26F00B4CC7C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
