@@ -69,7 +69,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Keresés" id="LsL-BO-PSA"/>
+                    <navigationItem key="navigationItem" title="Keresés" id="LsL-BO-PSA">
+                        <barButtonItem key="backBarButtonItem" title=" " id="2i8-nn-xIQ"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchTextField" destination="tfW-Pj-gLY" id="VkO-2T-tyA"/>
                         <outlet property="tableView" destination="vn9-2l-6Fb" id="CwS-5f-0hC"/>
@@ -83,10 +85,11 @@
         <scene sceneID="ubQ-EN-hWp">
             <objects>
                 <tableViewController id="Eez-yy-LeE" customClass="ForecastTableViewController" customModule="miniweather" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zOi-HH-GM7">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zOi-HH-GM7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="forecastCell" rowHeight="235" id="sNs-Yx-bQd" customClass="ForecastTableViewCell" customModule="miniweather" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="235"/>
@@ -132,8 +135,8 @@
                                                 <constraint firstAttribute="width" constant="64" id="yoC-Vo-wYA"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Napos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tby-YP-KGl">
-                                            <rect key="frame" x="88" y="174.5" width="52.5" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Napos" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tby-YP-KGl">
+                                            <rect key="frame" x="88" y="175" width="52.5" height="20.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>

@@ -36,12 +36,18 @@ class NetworkController {
     }
     
     private func buildUrl(searchString: String) -> URL? {
-        let searchQueryUrlString = "\(baseUrlString)/search.json?key=\(apiKey)&q=\(searchString)"
-        return URL(string: searchQueryUrlString)
+        var urlComponents = URLComponents(string: "\(baseUrlString)/search.json")
+        urlComponents?.queryItems = [URLQueryItem(name: "key", value: apiKey),
+                                    URLQueryItem(name: "q", value: searchString)]
+        return urlComponents?.url
     }
     
     private func buildUrl(location: String) -> URL? {
-        let locationUrlString = "\(baseUrlString)/forecast.json?key=\(apiKey)&q=\(location)&lang=hu&days=7"
-        return URL(string: locationUrlString)
+        var urlComponents = URLComponents(string: "\(baseUrlString)/forecast.json")
+        urlComponents?.queryItems = [URLQueryItem(name: "key", value: apiKey),
+                                    URLQueryItem(name: "q", value: location),
+                                    URLQueryItem(name: "lang", value: "hu"),
+                                    URLQueryItem(name: "days", value: "7")]
+        return urlComponents?.url
     }
 }
