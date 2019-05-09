@@ -9,12 +9,55 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var locations = [BasicLocation]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        searchTextField.delegate = self
+        tableView.dataSource = self
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showForecast" {
+            
+        }
+        else {
+            print("Unknown segue: \(segue)")
+        }
+    }
+}
 
+extension ViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let searchString = textField.text, !searchString.isEmpty else { return true }
+        NetworkController.shared.getLocations(searchString: searchString) { locations in
+            guard let locations = locations else { return }
+            self.locations = locations
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+        textField.resignFirstResponder()
+        return true
+    }
 
 }
 
+extension ViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return locations.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "searchResultCell", for: indexPath) as! SearchResultTableViewCell
+        cell.setup(cityName: locations[indexPath.row].name)
+        return cell
+    }
+}

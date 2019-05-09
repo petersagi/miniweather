@@ -24,19 +24,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vn9-2l-6Fb">
-                                <rect key="frame" x="16" y="134" width="382" height="762"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vn9-2l-6Fb">
+                                <rect key="frame" x="0.0" y="134" width="414" height="762"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchResultCell" rowHeight="50" id="Jmb-ao-Fr9" customClass="SearchResultTableViewCell" customModule="miniweather" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="382" height="50"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jmb-ao-Fr9" id="A5W-1Y-QQE">
-                                            <rect key="frame" x="0.0" y="0.0" width="382" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zalaegerszeg, Zala, Magyarország" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDn-hd-Ydi">
-                                                    <rect key="frame" x="28" y="14.5" width="326" height="21"/>
+                                                    <rect key="frame" x="28" y="15" width="358" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -44,7 +44,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="aDn-hd-Ydi" secondAttribute="trailing" constant="8" id="DwW-re-ZeE"/>
-                                                <constraint firstItem="aDn-hd-Ydi" firstAttribute="centerY" secondItem="A5W-1Y-QQE" secondAttribute="centerY" id="cTt-Rf-WIF"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="aDn-hd-Ydi" secondAttribute="bottom" constant="4" id="Zh9-pw-CXy"/>
+                                                <constraint firstItem="aDn-hd-Ydi" firstAttribute="top" secondItem="A5W-1Y-QQE" secondAttribute="topMargin" constant="4" id="acG-m0-i7H"/>
                                                 <constraint firstItem="aDn-hd-Ydi" firstAttribute="leading" secondItem="A5W-1Y-QQE" secondAttribute="leadingMargin" constant="8" id="qTv-z8-q9m"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -58,17 +59,21 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vn9-2l-6Fb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9WF-qg-4hz"/>
                             <constraint firstAttribute="bottom" secondItem="vn9-2l-6Fb" secondAttribute="bottom" id="BUG-qL-mcI"/>
                             <constraint firstItem="vn9-2l-6Fb" firstAttribute="top" secondItem="tfW-Pj-gLY" secondAttribute="bottom" id="SMc-r0-MDa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tfW-Pj-gLY" secondAttribute="trailing" constant="16" id="VO7-Fd-9KQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vn9-2l-6Fb" secondAttribute="trailing" constant="16" id="Xf0-W4-bTq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vn9-2l-6Fb" secondAttribute="trailing" id="Wcq-53-KL0"/>
+                            <constraint firstItem="vn9-2l-6Fb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zrn-FG-6ha"/>
                             <constraint firstItem="tfW-Pj-gLY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="l4y-0l-5oT"/>
                             <constraint firstItem="tfW-Pj-gLY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="onI-3M-JYr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Keresés" id="LsL-BO-PSA"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="tfW-Pj-gLY" id="VkO-2T-tyA"/>
+                        <outlet property="tableView" destination="vn9-2l-6Fb" id="CwS-5f-0hC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
