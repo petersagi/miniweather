@@ -24,7 +24,11 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showForecast" {
-            
+            if let destination = segue.destination as? ForecastTableViewController,
+                let selectedRow = tableView.indexPathForSelectedRow?.row {
+                destination.locationUrl = locations[selectedRow].url
+                destination.preferredTitle = locations[selectedRow].name
+            }
         }
         else {
             print("Unknown segue: \(segue)")

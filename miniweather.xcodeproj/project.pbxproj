@@ -13,6 +13,7 @@
 		CC17C0A8228311CA00F23CE8 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17C0A7228311CA00F23CE8 /* ImageUtil.swift */; };
 		CC17C0AB22831BF000F23CE8 /* Conditions.json in Resources */ = {isa = PBXBuildFile; fileRef = CC17C0AA22831BF000F23CE8 /* Conditions.json */; };
 		CC17C0AD22831DFE00F23CE8 /* ConditionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17C0AC22831DFE00F23CE8 /* ConditionInfo.swift */; };
+		CCAA25F722841A3200CF6251 /* ForecastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAA25F622841A3200CF6251 /* ForecastTableViewController.swift */; };
 		CCB556702282E26F00B4CC7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB5566F2282E26F00B4CC7C /* AppDelegate.swift */; };
 		CCB556722282E26F00B4CC7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB556712282E26F00B4CC7C /* ViewController.swift */; };
 		CCB556752282E26F00B4CC7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCB556732282E26F00B4CC7C /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		CC17C0A7228311CA00F23CE8 /* ImageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
 		CC17C0AA22831BF000F23CE8 /* Conditions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Conditions.json; sourceTree = "<group>"; };
 		CC17C0AC22831DFE00F23CE8 /* ConditionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionInfo.swift; sourceTree = "<group>"; };
+		CCAA25F622841A3200CF6251 /* ForecastTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewController.swift; sourceTree = "<group>"; };
 		CCB5566C2282E26F00B4CC7C /* miniweather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniweather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCB5566F2282E26F00B4CC7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCB556712282E26F00B4CC7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				CC17C0A22283112800F23CE8 /* Data */,
 				CCB556812282F1D900B4CC7C /* Model */,
 				CCB556712282E26F00B4CC7C /* ViewController.swift */,
+				CCAA25F622841A3200CF6251 /* ForecastTableViewController.swift */,
 				CCB556732282E26F00B4CC7C /* Main.storyboard */,
 				CC17C0A022830EBF00F23CE8 /* ForecastTableViewCell.swift */,
 				CC17C09E22830DFD00F23CE8 /* SearchResultTableViewCell.swift */,
@@ -213,6 +216,7 @@
 				CCB5568D2282F7B900B4CC7C /* ForecastDay.swift in Sources */,
 				CCB556722282E26F00B4CC7C /* ViewController.swift in Sources */,
 				CC17C0A122830EBF00F23CE8 /* ForecastTableViewCell.swift in Sources */,
+				CCAA25F722841A3200CF6251 /* ForecastTableViewController.swift in Sources */,
 				CCB556892282F5D100B4CC7C /* Condition.swift in Sources */,
 				CCB5568F2282F98F00B4CC7C /* Forecast.swift in Sources */,
 				CC17C0A8228311CA00F23CE8 /* ImageUtil.swift in Sources */,
