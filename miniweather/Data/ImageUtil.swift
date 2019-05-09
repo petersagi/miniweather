@@ -26,8 +26,8 @@ class ImageUtil {
         }
     }
     
-    static func getIcon(to condition: Int) -> UIImage? {
-        if let condition = (shared.info.filter { condition == $0.code }).first,
+    func getIcon(to condition: Int) -> UIImage? {
+        if let condition = (info.filter { condition == $0.code }).first,
             let image = UIImage(named: String(condition.icon)) {
             
             return image

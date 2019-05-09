@@ -14,7 +14,7 @@ class NetworkController {
     
     private init() {}
     
-    private let baseUrlString = "http://api.apixu.com/v1/current.json"
+    private let baseUrlString = "http://api.apixu.com/v1"
     private let apiKey = "9c0b99f6686444c3b0384518190805"
     
     func getLocations(searchString: String, completion: @escaping ([BasicLocation]?) -> Void) {
@@ -36,12 +36,12 @@ class NetworkController {
     }
     
     private func buildUrl(searchString: String) -> URL? {
-        let searchQueryUrlString = "\(baseUrlString)?key=\(apiKey)&q=\(searchString)"
+        let searchQueryUrlString = "\(baseUrlString)/search.json?key=\(apiKey)&q=\(searchString)"
         return URL(string: searchQueryUrlString)
     }
     
     private func buildUrl(location: String) -> URL? {
-        let locationUrlString = "\(baseUrlString)?key=\(apiKey)&g=\(location)&lang=hu&days=7"
+        let locationUrlString = "\(baseUrlString)/forecast.json?key=\(apiKey)&q=\(location)&lang=hu&days=7"
         return URL(string: locationUrlString)
     }
 }

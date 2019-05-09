@@ -24,7 +24,7 @@ class ForecastTableViewCell: UITableViewCell {
         sunsetLabel.text = info.astro.sunset
         dayTempLabel.text = String(info.day.maxtemp_c)
         nightTempLabel.text = String(info.day.mintemp_c)
-        conditionImageView.image = ImageUtil.getIcon(to: info.day.condition.code)
+        conditionImageView.image = ImageUtil.shared.getIcon(to: info.day.condition.code)
         conditionLabel.text = info.day.condition.text
     }
     
