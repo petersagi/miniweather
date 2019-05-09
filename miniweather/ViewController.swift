@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     var locations = [BasicLocation]()
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchTextField.delegate = self
+        searchBar.delegate = self
         tableView.dataSource = self
     }
     
@@ -36,10 +36,9 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITextFieldDelegate {
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        guard let searchString = textField.text, !searchString.isEmpty else { return true }
+extension ViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchString = searchBar.text, !searchString.isEmpty else { return }
         NetworkController.shared.getLocations(searchString: searchString) { locations in
             guard let locations = locations else { return }
             self.locations = locations
@@ -47,10 +46,8 @@ extension ViewController: UITextFieldDelegate {
                 self.tableView.reloadData()
             }
         }
-        textField.resignFirstResponder()
-        return true
+        searchBar.resignFirstResponder()
     }
-
 }
 
 extension ViewController: UITableViewDataSource {
